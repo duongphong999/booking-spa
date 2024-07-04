@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+
 <body>
-    <button type="button" class="btn btn-success">Success</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <form class="w-50">
+                    <fieldset disabled>
+                        <legend>Disabled fieldset example</legend>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">Disabled input</label>
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledSelect" class="form-label">Disabled select menu</label>
+                            <select id="disabledSelect" class="form-select">
+                                <option>Disabled select</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                                <label class="form-check-label" for="disabledFieldsetCheck">
+                                    Can't check this
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
