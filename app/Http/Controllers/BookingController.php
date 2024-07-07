@@ -43,7 +43,7 @@ class BookingController extends Controller
 
         $bookingData = array_merge($validatedData, ['services' => $services]);
 
-        Mail::to('buitrang0902vl@gmail.com')->send(new BookingNotification($bookingData));
+        Mail::to(env('MAIL_USERNAME'))->send(new BookingNotification($bookingData));
 
         return redirect()->route('booking.index')->with('success', 'Đặt lịch thành công!');
     }
