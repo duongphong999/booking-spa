@@ -854,9 +854,16 @@
             }
 
             function getDayOfWeek(dateString) {
-                const daysOfWeek = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
-                const date = new Date(dateString);
-                return daysOfWeek[date.getDay()];
+                var parts = dateString.split('/');
+                var day = parseInt(parts[0], 10);
+                var month = parseInt(parts[1], 10);
+                var year = parseInt(parts[2], 10);
+
+                var specificDate = new Date(year, month - 1, day);
+
+                var weekdays = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
+
+                return weekdays[specificDate.getDay()];
             }
 
             $('#tomorrowButton').on('click', function() {
